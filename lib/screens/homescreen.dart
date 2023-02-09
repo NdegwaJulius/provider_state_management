@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../provider/movie_provider.dart';
-import 'my_list_screen.dart';
+import 'mylist_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -20,7 +20,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('KindaCode.com'),
+        title: const Text('KayFilms.io'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(15),
@@ -54,12 +54,12 @@ class _HomeScreenState extends State<HomeScreen> {
                     final currentMovie = movies[index];
                     return Card(
                       key: ValueKey(currentMovie.title),
-                      color: Colors.amberAccent.shade100,
+                      color: Colors.amberAccent.shade200,
                       elevation: 4,
                       child: ListTile(
                         title: Text(currentMovie.title),
                         subtitle:
-                        Text(currentMovie.runtime ?? 'No information'),
+                            Text(currentMovie.runtime ?? 'No information'),
                         trailing: IconButton(
                           icon: Icon(
                             Icons.favorite,
@@ -89,3 +89,4 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
   }
+}
